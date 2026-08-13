@@ -9,6 +9,9 @@ import netlify from "@netlify/vite-plugin-tanstack-start";
 
 export default defineConfig({
   vite: { plugins: [netlify()] },
+  // Netlify's adapter owns the production output. Running Lovable's Nitro
+  // deploy plugin as well removes the publish directory before deployment.
+  nitro: false,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
