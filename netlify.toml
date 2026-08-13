@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = "dist/client"
+  command = "echo Publishing preserved final OrtoCraft build"
+  publish = "recovered-final"
 
 [dev]
   command = "npm run dev"
